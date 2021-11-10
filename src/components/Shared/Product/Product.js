@@ -34,7 +34,7 @@ const Product = (props) => {
                         ${price}
                     </Typography>
                 </CardContent>
-                <NavLink to={`/cartItem/${_id}`} style={{ "textDecoration": "none" }}>
+                <NavLink to={`/orderItem/${_id}`} style={{ "textDecoration": "none" }}>
                     <Button variant="outlined" style={{ backgroundColor: '#1B4F72', color: 'white' }}>Purchase</Button>
                 </NavLink>
             </CardActionArea>

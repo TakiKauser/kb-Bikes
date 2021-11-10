@@ -10,6 +10,7 @@ import Login from './components/UserAuth/Login/Login';
 import Register from './components/UserAuth/Register/Register';
 import PrivateRoute from './components/UserAuth/PrivateRoute/PrivateRoute';
 import DashBoardPage from './components/Pages/DashBoardPage';
+import OrderPage from './components/Pages/OrderPage';
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
             <Route path="/home">
               <HomePage />
             </Route>
+            <PrivateRoute path="/orderItem/:orderId">
+              <OrderPage />
+            </PrivateRoute>
             <PrivateRoute path="/dashboard">
               <DashBoardPage />
             </PrivateRoute>
