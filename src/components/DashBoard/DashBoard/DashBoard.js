@@ -17,6 +17,8 @@ import ListAltIcon from '@mui/icons-material/ListAlt';
 import AddModeratorIcon from '@mui/icons-material/AddModerator';
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import RateReviewIcon from '@mui/icons-material/RateReview';
+import EditIcon from '@mui/icons-material/Edit';
+import EditAttributesIcon from '@mui/icons-material/EditAttributes';
 import LogoutIcon from '@mui/icons-material/Logout';
 import {
     Switch,
@@ -32,6 +34,8 @@ import AddProduct from '../AddProduct/AddProduct';
 import Reviews from '../Reviews/Reviews';
 import Payment from '../Payment/Payment';
 import MyOrders from '../MyOrders/MyOrders';
+import ManageProducts from '../ManageProducts/ManageProducts';
+import ManageOrders from '../ManageOrders/ManageOrders';
 
 const drawerWidth = 200;
 
@@ -55,7 +59,7 @@ function DashBoard(props) {
                 <Link to="/" style={{ textDecoration: "none", color: "inherit" }}><Button color="inherit"><HomeIcon /> Home Page</Button></Link>
                 <Link to={`${url}`} style={{ textDecoration: "none", color: "inherit" }}><Button color="inherit"><DashboardIcon /> DashBoard</Button></Link>
                 {
-                    // !admin &&
+                    !admin &&
                     <Box>
                         <Link to={`${url}/payment`} style={{ textDecoration: "none", color: "inherit" }}><Button color="inherit"><PaymentsIcon />Payment</Button></Link>
                         <Link to={`${url}/review`} style={{ textDecoration: "none", color: "inherit" }}><Button color="inherit"><RateReviewIcon />Reviews</Button></Link>
@@ -67,6 +71,8 @@ function DashBoard(props) {
                     <Box>
                         <Link to={`${url}/makeAdmin`} style={{ textDecoration: "none", color: "inherit" }}><Button color="inherit"><AddModeratorIcon />Make Admin</Button></Link>
                         <Link to={`${url}/addProduct`} style={{ textDecoration: "none", color: "inherit" }}><Button color="inherit"><AddBoxIcon />Add Product</Button></Link>
+                        <Link to={`${url}/manageOrders`} style={{ textDecoration: "none", color: "inherit" }}><Button color="inherit"><EditIcon />Manage Orders</Button></Link>
+                        <Link to={`${url}/manageProducts`} style={{ textDecoration: "none", color: "inherit" }}><Button color="inherit"><EditAttributesIcon />Manage Products</Button></Link>
                     </Box>
                 }
                 {
@@ -150,17 +156,23 @@ function DashBoard(props) {
                     <Route path={`${path}/payment`}>
                         <Payment />
                     </Route>
-                    <Route path={`${path}/review`}>
-                        <Reviews />
-                    </Route>
                     <Route path={`${path}/myOrders`}>
                         <MyOrders />
+                    </Route>
+                    <Route path={`${path}/review`}>
+                        <Reviews />
                     </Route>
                     <AdminRoute path={`${path}/makeAdmin`}>
                         <MakeAdmin />
                     </AdminRoute>
                     <AdminRoute path={`${path}/addProduct`}>
                         <AddProduct />
+                    </AdminRoute>
+                    <AdminRoute path={`${path}/manageOrders`}>
+                        <ManageOrders />
+                    </AdminRoute>
+                    <AdminRoute path={`${path}/manageProducts`}>
+                        <ManageProducts />
                     </AdminRoute>
                 </Switch>
             </Box>
