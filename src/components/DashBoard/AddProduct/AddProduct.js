@@ -32,7 +32,7 @@ const AddProduct = () => {
                 <input type="text" placeholder="Product Title" {...register("title", { required: true, maxLength: 100 })} />
                 {errors.title && <span>Product Title is required</span>}
 
-                <input type="text" placeholder="Image Link" {...register("image", { required: true, maxLength: 100 })} />
+                <input type="text" placeholder="Image Link" {...register("image", { required: true })} />
                 {errors.image && <span>Image URL is required</span>}
 
                 <input type="text" placeholder="Description" {...register("description", { required: true })} />
