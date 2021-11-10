@@ -1,5 +1,6 @@
 import React from 'react';
 import MenuBar from '../../Shared/MenuBar/MenuBar';
+import Products from '../../Shared/Products/Products';
 import Banner from '../Banner/Banner';
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
         <div>
             <MenuBar />
             <Banner />
+            <Products />
         </div>
     );
 };
