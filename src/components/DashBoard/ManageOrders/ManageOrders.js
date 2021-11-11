@@ -11,7 +11,7 @@ const ManageOrders = () => {
     const handleUpdateOrderStatus = (id) => {
         const confirmation = window.confirm("Order has shipped???");
         if (confirmation) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://guarded-ocean-83766.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: "PUT",
                 headers: {
