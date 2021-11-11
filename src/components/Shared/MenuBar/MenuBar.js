@@ -28,7 +28,7 @@ const MenuBar = () => {
                         kb-Bikes
                     </Typography>
                     <NavLink to="/" style={{ textDecoration: "none", color: "inherit" }}><Button color="inherit">HOME</Button></NavLink>
-                    {/* <NavLink to="/appointment" style={{ textDecoration: "none", color: "inherit" }}><Button color="inherit">Appointment</Button></NavLink> */}
+                    <NavLink to="/bikes" style={{ textDecoration: "none", color: "inherit" }}><Button color="inherit">BIKES</Button></NavLink>
                     {
                         user?.email ?
 

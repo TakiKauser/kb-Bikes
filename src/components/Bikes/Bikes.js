@@ -1,37 +1,10 @@
+import { Box, Button, Card, CardActionArea, CardContent, CardMedia, Container, Grid, Typography } from '@mui/material';
 import React from 'react';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import { Container, Typography } from '@mui/material';
+import { NavLink } from 'react-router-dom';
+import useAllProducts from '../../hooks/useAllProducts';
 
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import { Button, CardActionArea } from '@mui/material';
-import DeleteIcon from '@mui/icons-material/Delete';
-import useAllProducts from '../../../hooks/useAllProducts';
-
-const ManageProducts = () => {
-    const { allProducts, setAllProducts } = useAllProducts();
-    // const { myOrders, setMyOrders } = useMyOrders();
-
-    const handleDeleteProduct = id => {
-        const confirmation = window.confirm("Delete this product from list permanently???");
-
-        if (confirmation) {
-            const url = `https://guarded-ocean-83766.herokuapp.com/allBikes/${id}`;
-            fetch(url, {
-                method: 'DELETE'
-            })
-                .then(response => response.json())
-                .then(jsonData => {
-                    if (jsonData.deletedCount) {
-                        alert("This product is removed!");
-                        const remainingProducts = allProducts.filter(product => product._id !== id);
-                        setAllProducts(remainingProducts);
-                    }
-                });
-        }
-    };
+const Bikes = () => {
+    const { allProducts } = useAllProducts();
     return (
         <Box sx={{ flexGrow: 1 }}>
             <Container>
@@ -61,9 +34,9 @@ const ManageProducts = () => {
                                             ${product?.price}
                                         </Typography>
                                     </CardContent>
-                                    <Button onClick={() => handleDeleteProduct(product?._id)} sx={{ color: "error.main" }} startIcon={<DeleteIcon />}>
-                                        Delete
-                                    </Button>
+                                    <NavLink to={`/orderItem/${product?._id}`} style={{ "textDecoration": "none" }}>
+                                        <Button variant="outlined" style={{ backgroundColor: '#1B4F72', color: 'white' }}>Purchase</Button>
+                                    </NavLink>
                                 </CardActionArea>
                             </Card>
                         </Grid>
@@ -74,4 +47,4 @@ const ManageProducts = () => {
     );
 };
 
-export default ManageProducts;
+export default Bikes;
