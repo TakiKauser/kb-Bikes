@@ -13,7 +13,7 @@ const Order = () => {
 
     const onSubmit = data => {
 
-        data.status = "pending";
+        data.status = "Pending";
 
         fetch(`https://guarded-ocean-83766.herokuapp.com/order`, {
             method: "POST",

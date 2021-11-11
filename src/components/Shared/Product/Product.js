@@ -11,12 +11,6 @@ const Product = (props) => {
     return (
         <Card sx={{ maxWidth: 345, border: 0, boxShadow: 0 }}>
             <CardActionArea>
-                {/* <CardMedia
-                    component="img"
-                    style={{ width: '100%', height: '200px', margin: '0 auto' }}
-                    image={image}
-                    alt="cycle"
-                /> */}
                 <CardMedia
                     component="img"
                     height="200"
