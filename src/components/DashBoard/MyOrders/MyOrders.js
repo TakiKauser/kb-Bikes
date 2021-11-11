@@ -19,7 +19,7 @@ const MyOrders = () => {
                 .then(jsonData => {
                     if (jsonData.deletedCount) {
                         alert("Booking Canceled!");
-                        const remainingMyOrders = myOrders.filter(booking => booking._id !== id);
+                        const remainingMyOrders = myOrders.filter(myOrder => myOrder._id !== id);
                         setMyOrders(remainingMyOrders);
                     }
                 });
@@ -29,6 +29,7 @@ const MyOrders = () => {
     const lightTheme = createTheme({ palette: { mode: 'light' } });
     return (
         <Container>
+            <Typography variant="h5" gutterBottom component="div">My Orders</Typography>
             <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <ThemeProvider theme={lightTheme}>
