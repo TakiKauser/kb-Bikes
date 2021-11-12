@@ -12,6 +12,7 @@ import PrivateRoute from './components/UserAuth/PrivateRoute/PrivateRoute';
 import DashBoardPage from './components/Pages/DashBoardPage';
 import OrderPage from './components/Pages/OrderPage';
 import BikesPage from './components/Pages/BikesPage';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   return (
@@ -39,6 +40,9 @@ function App() {
             </Route>
             <Route path="/register">
               <Register />
+            </Route>
+            <Route path="*">
+              <NotFound />
             </Route>
           </Switch>
         </Router>

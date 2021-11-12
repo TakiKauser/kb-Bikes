@@ -1,0 +1,8 @@
+.not-found {
+  background-image: url("https://i.ibb.co/25pQpN4/not-found-404.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
