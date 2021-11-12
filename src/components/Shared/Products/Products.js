@@ -10,8 +10,7 @@ const Products = () => {
     return (
         <Box sx={{ flexGrow: 1 }}>
             <Container>
-                {/* <Typography sx={{ fontWeight: 600, color: 'info.main', m: 3 }} variant="h6" component="div">OUR SERVICES</Typography> */}
-                <Typography sx={{ fontWeight: 600, m: 3 }} variant="h4" component="div">Top Bikes</Typography>
+                <Typography sx={{ fontWeight: 600, m: 3, color: '#1B4F72', my: 5}} variant="h4" component="div">Featured Bikes</Typography>
                 <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                     {products?.map((product, index) => (
                         <Grid item xs={4} sm={4} md={4} key={index}>
