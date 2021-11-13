@@ -8,6 +8,9 @@ const AdminRoute = ({ children, ...rest }) => {
     if (isLoading) {
         return <LinearProgress />
     }
+    if(!admin) {
+        return <LinearProgress />
+    }
     return (
         <Route
             {...rest}
