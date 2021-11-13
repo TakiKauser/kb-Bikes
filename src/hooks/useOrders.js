@@ -7,10 +7,9 @@ const useOrders = () => {
         fetch(url)
             .then(response => response.json())
             .then(jsonData => {
-                // console.log(jsonData);
                 setOrders(jsonData);
             })
-    }, []);
+    }, [orders]);
     return {
         orders,
         setOrders
