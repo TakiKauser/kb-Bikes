@@ -95,6 +95,7 @@ function DashBoard(props) {
                 sx={{
                     width: { sm: `calc(100% - ${drawerWidth}px)` },
                     ml: { sm: `${drawerWidth}px` },
+                    backgroundColor: '#1A729F'
                 }}
             >
                 <Toolbar>
