@@ -29,7 +29,7 @@ const MyOrders = () => {
     const lightTheme = createTheme({ palette: { mode: 'light' } });
     return (
         <Container>
-            <Typography variant="h5" gutterBottom component="div">My Orders</Typography>
+            <Typography sx={{ fontWeight: 600, m: 3, color: '#1B4F72', mb: 5 }} variant="h4" component="div">My Orders</Typography>
             <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <ThemeProvider theme={lightTheme}>
