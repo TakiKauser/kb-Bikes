@@ -8,7 +8,7 @@ const AdminRoute = ({ children, ...rest }) => {
     if (isLoading) {
         return <LinearProgress />
     }
-    if(!admin) {
+    if (!admin) {
         return <LinearProgress />
     }
     return (
@@ -20,7 +20,7 @@ const AdminRoute = ({ children, ...rest }) => {
                 ) : (
                     <Redirect
                         to={{
-                            pathname: "/",
+                            pathname: "/dashboard",
                             state: { from: location }
                         }}
                     />
