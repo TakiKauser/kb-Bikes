@@ -13,7 +13,7 @@ const MenuBar = () => {
     const { user, logOut } = useAuth();
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
+            <AppBar position="static" sx={{backgroundColor: '#1A729F', color: 'white' }}>
                 <Toolbar>
                     <IconButton
                         size="large"
