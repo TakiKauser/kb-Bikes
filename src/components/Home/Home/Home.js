@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from '../../Shared/Footer/Footer';
 import MenuBar from '../../Shared/MenuBar/MenuBar';
+// import Navigation from '../../Shared/Navigation/Navigation';
 import Products from '../../Shared/Products/Products';
 import Banner from '../Banner/Banner';
 import BikeComponents from '../BikeComponents/BikeComponents';
@@ -10,6 +11,7 @@ const Home = () => {
     return (
         <div>
             <MenuBar />
+            {/* <Navigation /> */}
             <Banner />
             <Products />
             <Reviews />
